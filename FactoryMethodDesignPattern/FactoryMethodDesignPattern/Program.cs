@@ -1,15 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using FactoryMethodDesignPattern.Classes;
 namespace FactoryMethodDesignPattern
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
+			ExecutiveEmployee executiveEmployee = new ExecutiveEmployee();
+			executiveEmployee.GetReadyForTravel();
+
+			OrdinaryEmployee ordinaryEmployee = new OrdinaryEmployee();
+			ordinaryEmployee.GetReadyForTravel();
+
+			Console.ReadKey();
 		}
 	}
 }

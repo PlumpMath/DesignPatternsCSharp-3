@@ -41,6 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CompactCarRental.cs" />
+    <Compile Include="Classes\EconomyClassAirTicket.cs" />
+    <Compile Include="Classes\ExecutiveEmployee.cs" />
+    <Compile Include="Classes\FirstClassAirTicket.cs" />
+    <Compile Include="Classes\LuxuryCarRental.cs" />
+    <Compile Include="Classes\OrdinaryEmployee.cs" />
+    <Compile Include="Interfaces\IAirTicket.cs" />
+    <Compile Include="Interfaces\ICarRental.cs" />
+    <Compile Include="Interfaces\Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,6 +59,7 @@
   <ItemGroup>
     <Content Include="ReadMe.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
