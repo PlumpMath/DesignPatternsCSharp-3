@@ -7,30 +7,30 @@ using AbstractFactroryDesignPattern.Interfaces;
 
 namespace AbstractFactroryDesignPattern.Classes
 {
-	public class ComputerB: IComputer<ComputerB, MemoryB, CpuB>
+	public class ComputerB: IComputer
 	{
-		public IMemory<MemoryB> Memory { get; private set; }
-		public ICpu<CpuB> Cpu { get; private set; }
+		public IMemory Memory { get; private set; }
+		public ICpu Cpu { get; private set; }
 
-		public ComputerB(IMemory<MemoryB> memory, ICpu<CpuB> cpu)
+		public ComputerB(IMemory memory, ICpu cpu)
 		{
 			Memory = memory;
 			Cpu = cpu;
 		}
 
-		//public IMemory<MemoryB> GetMemory()
-		//{
-		//	return Memory;
-		//}
-
-		//public CpuB GetCpu()
-		//{
-		//	return Cpu;
-		//}
-
-		public ComputerB GetComputer(IMemory<MemoryB> memory, ICpu<CpuB> cpu)
+		public IMemory GetMemory()
 		{
-			return new ComputerB(memory, cpu);
+			return Memory;
 		}
+
+		public ICpu GetCpu()
+		{
+			return Cpu;
+		}
+
+		//public IComputer<MemoryB, CpuB> GetComputer(IMemory<MemoryB> memory, ICpu<CpuB> cpu)
+		//{
+		//	return new ComputerB(memory, cpu);
+		//}
 	}
 }

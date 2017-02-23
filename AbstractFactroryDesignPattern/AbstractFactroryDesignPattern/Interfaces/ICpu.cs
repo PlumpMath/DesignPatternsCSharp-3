@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AbstractFactroryDesignPattern.Interfaces
 {
-	public interface ICpu<T>
+	public interface ICpu
 	{
-		T GetCpu(string name);
+		//T GetCpu(string name);
 		string GetName();
 	}
 }

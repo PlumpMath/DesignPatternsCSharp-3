@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace AbstractFactroryDesignPattern.Interfaces
 {
-	public interface IComputer<T, M, C>
+	public interface IComputer
 	{
 		//IMemory<T> GetMemory();
 		//ICpu<T> GetCpu();
 
-		T GetComputer(IMemory<M> memory, ICpu<C> cpu);
+		IMemory GetMemory();
+		ICpu GetCpu();
 	}
 }

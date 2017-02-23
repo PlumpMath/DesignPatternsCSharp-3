@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using AbstractFactroryDesignPattern.Classes;
 using AbstractFactroryDesignPattern.Interfaces;
 
@@ -9,35 +10,47 @@ namespace AbstractFactroryDesignPattern
 		static void Main(string[] args)
 		{
 			Computer computer = new Computer(new Memory("Memory"), new Cpu("Cpu"));
-			Computer newComputer = BuildComputerViolatesOCP(computer);
-			Console.WriteLine("Memory: {0}, Cpu: {1}", newComputer.Memory.Name, newComputer.Cpu.Name);
+			Console.WriteLine(GiveComputerDetailsViolatesOCP(computer));
 
-			ComputerA computerA = new ComputerA(new MemoryA(""), new CpuA(""));
-			ComputerA newComputerA = computerA.GetComputer(new MemoryA("MemoryA"), new CpuA("CpuA"));
-			Console.WriteLine("Memory: {0}, Cpu: {1}", newComputerA.Memory.GetName(), newComputerA.Cpu.GetName());
+			ComputerA computerA = new ComputerA(new MemoryA("MemoryA"), new CpuA("CpuA"));
+			Console.WriteLine(GiveComputerDetails(computerA));
 
+			ComputerA computerB = new ComputerA(new MemoryB("MemoryB"), new CpuB("CpuB"));
+			Console.WriteLine(GiveComputerDetails(computerB));
 
 			Console.ReadKey();
 		}
 
 		/// <summary>
-		/// Violates Open closed principle
+		/// Violates Open closed principle. If a new computer comes over and this method will not be able to handle it without extending it.
 		/// </summary>
-		/// <param name="computer"></param>
+		/// <param name="Computer computer"></param>
 		/// <returns></returns>
-		private static Computer BuildComputerViolatesOCP(Computer computer)
+		private static string GiveComputerDetailsViolatesOCP(Computer computer)
 		{
-			return new Computer(computer.Memory, computer.Cpu);
+			StringBuilder stringBuilder = new StringBuilder();
+			stringBuilder.Append("Memory: ");
+			stringBuilder.Append(computer.Memory.Name);
+			stringBuilder.Append(", Cpu: ");
+			stringBuilder.Append(computer.Cpu.Name);
+			
+			return stringBuilder.ToString();
 		}
 
 		/// <summary>
-		/// Violates Open closed principle
+		/// Any number of new computers can be added and as long as they implement IComputer interface this method will not change.
 		/// </summary>
-		/// <param name="computerA"></param>
+		/// <param name="IComputer computer"></param>
 		/// <returns></returns>
-		private static T BuildComputer(IComputer<T, M, C> computer)
+		private static string GiveComputerDetails(IComputer computer)
 		{
-			return computer.GetComputer(computer.)
+			StringBuilder stringBuilder = new StringBuilder();
+			stringBuilder.Append("Memory: ");
+			stringBuilder.Append(computer.GetMemory().GetName());
+			stringBuilder.Append(", Cpu: ");
+			stringBuilder.Append(computer.GetCpu().GetName());
+
+			return stringBuilder.ToString();
 		}
 	}
 }

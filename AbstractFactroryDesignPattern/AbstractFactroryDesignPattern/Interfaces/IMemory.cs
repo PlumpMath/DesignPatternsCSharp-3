@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AbstractFactroryDesignPattern.Interfaces
 {
-	public interface IMemory<T>
+	public interface IMemory
 	{
-		T GetMemory(string name);
+		//T GetMemory(string name);
 		string GetName();
 	}
 }

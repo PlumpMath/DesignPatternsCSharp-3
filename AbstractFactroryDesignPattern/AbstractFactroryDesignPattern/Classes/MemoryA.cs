@@ -7,7 +7,7 @@ using AbstractFactroryDesignPattern.Interfaces;
 
 namespace AbstractFactroryDesignPattern.Classes
 {
-	public class MemoryA: IMemory<MemoryA>
+	public class MemoryA: IMemory
 	{
 		public string Name { get; private set; }
 
@@ -21,9 +21,9 @@ namespace AbstractFactroryDesignPattern.Classes
 			return Name;
 		}
 
-		public MemoryA GetMemory(string name)
-		{
-			return new MemoryA(name);
-		}
+		//public MemoryA GetMemory(string name)
+		//{
+		//	return new MemoryA(name);
+		//}
 	}
 }

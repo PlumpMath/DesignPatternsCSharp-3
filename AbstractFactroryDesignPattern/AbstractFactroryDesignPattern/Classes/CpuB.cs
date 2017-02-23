@@ -7,7 +7,7 @@ using AbstractFactroryDesignPattern.Interfaces;
 
 namespace AbstractFactroryDesignPattern.Classes
 {
-	public class CpuB: ICpu<CpuB>
+	public class CpuB: ICpu
 	{
 		public string Name { get; private set; }
 
@@ -21,9 +21,9 @@ namespace AbstractFactroryDesignPattern.Classes
 			return Name;
 		}
 
-		public CpuB GetCpu(string name)
-		{
-			return new CpuB(name);
-		}
+		//public CpuB GetCpu(string name)
+		//{
+		//	return new CpuB(name);
+		//}
 	}
 }
