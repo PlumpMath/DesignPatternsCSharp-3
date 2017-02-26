@@ -24,6 +24,7 @@ namespace FlyweightPattern.Classes.Persons
 			foreach(IDisease disease in Ethnicity.Diseases())
 			{
 				symptoms.Append(disease.Symptoms());
+				symptoms.Append(" ");
 			}
 			 
 			return symptoms.ToString();
@@ -35,6 +36,7 @@ namespace FlyweightPattern.Classes.Persons
 			foreach (IDisease disease in Ethnicity.Diseases())
 			{
 				diseases.Append(disease.Name());
+				diseases.Append(", ");
 			}
 
 			return diseases.ToString();

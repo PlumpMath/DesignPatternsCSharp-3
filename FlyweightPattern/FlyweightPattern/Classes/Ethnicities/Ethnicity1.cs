@@ -20,7 +20,7 @@ namespace FlyweightPattern.Classes.Ethnicities
 		private Ethnicity1(string name, List<IDisease> diseases)
 		{
 			_name = name;
-			diseases = _diseases;
+			_diseases = diseases;
 		}
 
 		public static Ethnicity1 Instance(string name, List<IDisease> diseases)

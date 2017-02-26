@@ -9,5 +9,6 @@ namespace FlyweightPattern.Interfaces
 	public interface IEthnicity
 	{
 		List<IDisease> Diseases();
+		string Name();
 	}
 }

@@ -29,21 +29,21 @@ namespace FlyweightPattern
 			Person rickSmith = new Person("Rick Smith", ethnicity1);
 
 			Console.WriteLine("Name: {0}, Ethnicity {1}, Probable Diseases {2}, Possible symptoms {3}",
-				mikeSmith.Name, mikeSmith.Ethnicity, mikeSmith.GetDiseases(), mikeSmith.GetSymptoms());
+				mikeSmith.Name, mikeSmith.Ethnicity.Name(), mikeSmith.GetDiseases(), mikeSmith.GetSymptoms());
 
 			Console.WriteLine("Name: {0}, Ethnicity {1}, Probable Diseases {2}, Possible symptoms {3}",
-				johnSmith.Name, johnSmith.Ethnicity, johnSmith.GetDiseases(), johnSmith.GetSymptoms());
+				johnSmith.Name, johnSmith.Ethnicity.Name(), johnSmith.GetDiseases(), johnSmith.GetSymptoms());
 
 			Console.WriteLine("Name: {0}, Ethnicity {1}, Probable Diseases {2}, Possible symptoms {3}",
-				jackSmith.Name, jackSmith.Ethnicity, jackSmith.GetDiseases(), jackSmith.GetSymptoms());
+				jackSmith.Name, jackSmith.Ethnicity.Name(), jackSmith.GetDiseases(), jackSmith.GetSymptoms());
 
 			Console.WriteLine("Name: {0}, Ethnicity {1}, Probable Diseases {2}, Possible symptoms {3}",
-				nickSmith.Name, nickSmith.Ethnicity, nickSmith.GetDiseases(), nickSmith.GetSymptoms());
+				nickSmith.Name, nickSmith.Ethnicity.Name(), nickSmith.GetDiseases(), nickSmith.GetSymptoms());
 
 			Console.WriteLine("Name: {0}, Ethnicity {1}, Probable Diseases {2}, Possible symptoms {3}",
-				rickSmith.Name, rickSmith.Ethnicity, rickSmith.GetDiseases(), rickSmith.GetSymptoms());
+				rickSmith.Name, rickSmith.Ethnicity.Name(), rickSmith.GetDiseases(), rickSmith.GetSymptoms());
 
-
+			Console.ReadKey();
 
 		}
 
